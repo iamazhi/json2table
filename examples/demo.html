@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Columns - Examples</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+        <link id="style" href="../css/clean.css" rel="stylesheet" media="screen">
+
+        <script src="../js/jquery.min.js"></script>
+        <script src="../plugins/gotopage.js"></script>
+        <script src="../plugins/ajaxpaging.js"></script>
+        <script src="../js/jquery.columns.min.js"></script>
+
+        <!-- Include required JS files -->
+        <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+    </head>
+    <body>
+        <select id="theme"> <option value="clean.css">整洁版</option> <option value="classic.css">经典版</option> </select>
+        <script> $('#theme').change(function() { $('#style').attr('href', '../css/'+$(this).val()); }) </script>
+
+        <h1>实例</h1>
+
+        <h2>Example 1: 直接根据json</h2>
+        <div id="example1"></div>
+        <h2>Example 2: 通过ajax获取json</h2>
+        <div id="example2"></div>
+        <h2>Example 3: 基本的schema</h2>
+        <div id="example3"></div>
+        <h2>Example 4: 带template的schema</h2>
+        <div id="example4"></div>
+        <h2>Example 5: 带condition的schema</h2>
+        <div id="example5"></div>
+        <h2>Example 6: 结合GoToPage插件</h2>
+        <div id="example6"></div>
+        <h2>Example 7: 结合AjaxPageing插件</h2>
+        <div id="example7"></div>
+        <h2>Example 8: 销毁和新建</h2><button id="example8Button">新建</button>
+        <div id="example8"></div>
+        <script src="./demo.js"></script>
+
+    </body>
+</html>

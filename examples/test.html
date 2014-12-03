@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if IE 7]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Columns - Examples</title>
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+
+        <link id="style" href="../css/clean.css" rel="stylesheet" media="screen">
+
+        <script src="../js/jquery.min.js"></script>
+        <script src="../plugins/gotopage.js"></script>
+        <script src="../plugins/ajaxpaging.js"></script>
+        <script src="../js/jquery.columns.min.js"></script>
+
+        <!-- Include required JS files -->
+        <!-- <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script> -->
+    </head>
+    <body>
+        <div id="example1"></div>
+        <div id="example2"></div>
+        <script>
+          //example 7:ajaxPaging
+          $.ajax({
+            url:'http://local.meizai.com/api.php?m=poi&a=getList&source=baidu&query=%E9%A4%90%E9%A5%AE&searchType=circle&range=24.50000,118.20000',
+            data: {"pageID": 0, "recPerPage": 5},
+            dataType: 'json',
+            success: function(json) {
+              example7 = $('#example2').columns({
+                data:  json.data,
+                pages: json.pages,
+                total: json.recTotal,
+                plugins:['ajaxpaging']
+              });
+            }
+          });
+
+        </script>
+    </body>
+</html>
